@@ -39,13 +39,9 @@ body {
   font-weight: 400;
   height: 10vh;
 
-  @media (max-width: 810px) {
-    body {
-      font-size: 0.8rem;
-    }
-  }
 
   &__logo {
+    margin-top: 17px;
     p {
       text-align: center;
     }
@@ -144,12 +140,11 @@ body {
     &__logo {
       // display: none;
       position: absolute;
-      top: 15px;
+      top: 0px;
     }
-
     &__list {
       flex-direction: column;
-      margin-top: 5rem;
+      margin-top: 4rem;
       width: 100%;
     }
 
@@ -165,7 +160,7 @@ body {
     &__item {
       text-align: center;
       border-bottom: 1px solid $goldColor;
-      padding: 1rem 0;
+      padding: 0.7rem 0;
     }
   }
 }
@@ -181,7 +176,6 @@ body {
   right: 25px;
   cursor: pointer;
   z-index: 1001;
-  background-color: $darkColor;
   .bar {
     width: 30px;
     height: 3px;
@@ -212,7 +206,6 @@ body {
   top: -20px;
   font-size: clamp(1.3rem, 1.4rem, 1.45rem);
 }
-
 
 @media (max-width: 850px) {
   .logoMobile {
@@ -365,7 +358,7 @@ body {
     &__img {
       width: 100%;
       max-width: 480px;
-      max-height: 620px;
+      max-height: 580px;
       height: auto;
       border-radius: 10px;
     }
