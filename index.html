@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Restrukturyzacje Karolina Kamińska >> Strona Główna</title>
+  </head>
+  <body class="main">
+    <!-- nav computer -->
+    <main class="wrapper">
+      <nav class="nav wrapper">
+        <div class="nav__logo">
+          <p>
+            Restrukturyzacje <br />
+            <span
+              style="
+                color: #fca311;
+                font-family: 'Charmonman', cursive;
+                font-weight: bold;
+              "
+              >Kamińska</span
+            >
+          </p>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Strona Główna</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">O Nas</a>
+          </li>
+          <li class="nav__item nav__item-contact">
+            <a href="#" class="nav__link">Kontakt</a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+              <a href="#" class="nav__link" id="services"
+                >Usługi <span class="nav__link-arrow">&#9662</span></a
+              >
+            <ul class="nav__dropdown">
+              <li class="nav__dropdown-item">
+                <a href="#" class="nav__dropdown-link">Restrukturyzacja Firm</a>
+              </li>
+              <li class="nav__dropdown-item">
+                <a href="#" class="nav__dropdown-link">Upadłość Konsumencka</a>
+              </li>
+              <li class="nav__dropdown-item">
+                <a href="#" class="nav__dropdown-link">Upadłość Gospodarcza</a>
+              </li>
+              <li class="nav__dropdown-item">
+                <a href="#" class="nav__dropdown-link">Obsługa Firm</a>
+              </li>
+              <li class="nav__dropdown-item">
+                <a href="#" class="nav__dropdown-link">Mediacje</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Aktualności</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- nav mobile -->
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="logoMobile">
+        <p>
+          Restrukturyzacje <br />
+          <span
+            style="
+              color: #fca311;
+              font-family: 'Charmonman', cursive;
+              font-weight: bold;
+            "
+            >Kamińska</span
+          >
+        </p>
+      </div>
+
+      <!-- main section -->
+      <header class="header">
+        <div class="left">
+          <h1 class="left__title">
+            Restrukturyzacje <br />
+            <span class="left__title-modifier">Karolina Kamińska</span>
+          </h1>
+          <p class="left__subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A iste,
+            temporibus natus, facere iusto porro, quia soluta aspernatur sed
+            distinctio consequatur necessitatibus minima assumenda repudiandae.
+            Cupiditate totam exercitationem debitis quae alias? Qui hic quis a!
+          </p>
+          <div class="left__button">
+            <a class="left__button-item left__button-item-contact">
+              Skontaktuj się
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  class="left__button-icon"
+                  viewBox="0 0 24 24"
+                  strokeWidth="3"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a class="left__button-item">
+              O kancelarii
+              <span
+                ><svg
+                  class="left__button-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="3"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="right">
+          <img src="./dist/images/4.jpg" alt="" class="right__img" />
+          <div class="right-box"></div>
+        </div>
+      </header>
+    </main>
+  </body>
+  <script src="dist/js/script.min.js"></script>
+</html>
