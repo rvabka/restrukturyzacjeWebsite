@@ -34,7 +34,7 @@
             <a href="#" class="nav__link">Strona Główna</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">O Nas</a>
+            <a href="#about" class="nav__link">O Nas</a>
           </li>
           <li class="nav__item nav__item-contact">
             <a href="#" class="nav__link">Kontakt</a>
@@ -155,7 +155,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__main wrapper">
           <div class="about__main-item first"><img class="about__main-photo" src="https://picsum.photos/500/300" alt=""></div>
           <div class="about__main-item second">
@@ -178,6 +178,11 @@
           </p></div>
       </div>
     </section>
+
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script>
+        smoothscroll.polyfill();
+    </script>
   </body>
   <script src="dist/js/script.min.js"></script>
 </html>
