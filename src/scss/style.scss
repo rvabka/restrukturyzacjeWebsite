@@ -1,14 +1,13 @@
 $primaryColor: #f5f5f5;
-$darkColor: #161920;
+$darkColor: #262a35;
 $brighterDarkColor: #424547;
 $goldColor: #fcb900;
-$mainPadding: 2rem;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Marcellus SC", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -20,18 +19,25 @@ html {
   margin: auto;
 }
 
-body {
+.mainArticle {
   position: relative;
-  color: $darkColor;
-  background-image: url("../images/backgroundDesktop.png");
+  background-image: url("../images/backgroundDesktopRight.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow-x: hidden;
 
   @media (max-width: 850px) {
-    background-image: url("../images/backgroundMobile.png");
+    background-image: url("../images/backgroundMobileRight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+}
+
+body {
+  position: relative;
+  color: $darkColor;
+  overflow-x: hidden;
 }
 
 // nav
@@ -39,9 +45,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem $mainPadding;
-  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-  font-family: "Cormorant Garamond", serif;
+  padding: 0.5rem 2rem;
+  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
   font-weight: 400;
   height: 10vh;
 
@@ -49,6 +54,45 @@ body {
     margin-top: 17px;
     p {
       text-align: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: $darkColor;
+    transition: 0.3s all ease;
+
+    &-arrow {
+      display: none;
+    }
+
+    &:hover {
+      color: $goldColor;
+      transform: scale(1.05);
+    }
+
+    &-contact {
+      background: $goldColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      padding: 10px 15px;
+      border: 2px solid $goldColor;
+      text-decoration: none;
+      cursor: pointer;
+      color: $darkColor;
+      transition: all 0.3s ease;
+
+      &:hover {
+        -webkit-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        -moz-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        color: $darkColor;
+        transform: scale(1.03);
+      }
     }
   }
 
@@ -68,23 +112,6 @@ body {
           display: block;
         }
       }
-    }
-  }
-
-  &__link {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: $darkColor;
-    transition: 0.3s all ease;
-
-    &-arrow {
-      display: none;
-    }
-
-    &:hover {
-      color: $goldColor;
-      transform: scale(1.05);
     }
   }
 
@@ -129,28 +156,29 @@ body {
 
   @media (max-width: 850px) {
     position: fixed;
-    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
     top: 0;
     left: -270px;
     width: 250px;
     height: 100%;
     background: $primaryColor;
-    z-index: 1;
+    z-index: 100;
     transition: left 0.3s ease;
     -webkit-box-shadow: 8px 4px 24px -15px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 4px 24px -15px rgba(66, 68, 90, 1);
     box-shadow: 8px 4px 24px -15px rgba(66, 68, 90, 1);
-
     &__logo {
       // display: none;
       position: absolute;
+      left: 20%;
       top: 0px;
     }
     &__list {
+      text-align: center;
       flex-direction: column;
-      margin-top: 4rem;
       width: 100%;
+      margin-top: -23rem;
     }
 
     &__link {
@@ -166,6 +194,10 @@ body {
       text-align: center;
       border-bottom: 1px solid $goldColor;
       padding: 0.7rem 0;
+
+      &:last-child {
+        border-bottom: 0px;
+      }
     }
   }
 }
@@ -177,7 +209,7 @@ body {
 
 .hamburger {
   position: absolute;
-  top: -7px;
+  top: 30px;
   right: 25px;
   cursor: pointer;
   z-index: 1001;
@@ -208,8 +240,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  top: -20px;
-  font-size: clamp(1.3rem, 1.4rem, 1.45rem);
+  top: 20px;
+  font-size: clamp(1rem, 1.2rem, 1.45rem);
 }
 
 @media (max-width: 850px) {
@@ -238,8 +270,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  padding: $mainPadding;
-  margin-top: 2rem;
+  padding: 2rem;
   height: 90vh;
 
   @media (max-width: 1200px) {
@@ -250,6 +281,8 @@ body {
     flex-direction: column;
     text-align: center;
     height: 100%;
+    padding: 0.5rem;
+    padding-top: 2rem;
   }
 
   .left {
@@ -269,23 +302,23 @@ body {
       width: 100%;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       width: 100%;
     }
 
     &__title {
-      font-size: clamp(1.7rem, 3.5vw, 3.4rem);
+      font-size: clamp(1.7rem, 3.6rem, 3.4rem);
       background: #161920;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 300;
       letter-spacing: 1.3px;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       background: linear-gradient(
         to right,
-        #161920 0%,
+        $darkColor 0%,
         $goldColor 50%,
-        #161920 100%
+        $darkColor 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -295,9 +328,9 @@ body {
         letter-spacing: 3px;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 850px) {
         margin-bottom: 0.6rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
       }
 
       @media (max-width: 480px) {
@@ -308,6 +341,7 @@ body {
     &__subtitle {
       font-size: clamp(1.4rem, 1.7vw, 2.1rem);
       margin-bottom: 1.5rem;
+      line-height: 2.2rem;
     }
 
     &__button {
@@ -370,10 +404,11 @@ body {
 
     &__img {
       width: 100%;
-      max-width: 480px;
-      max-height: 580px;
+      max-width: 450px;
+      max-height: 600px;
       height: auto;
       border-radius: 10px;
+      z-index: 4;
     }
 
     &-box {
@@ -384,7 +419,7 @@ body {
       background-color: $goldColor;
       right: 5px;
       top: -20px;
-      z-index: -1;
+      z-index: 3;
       border-radius: 10px;
       box-shadow: 6px 6px 10px 3px #dddddd;
     }
@@ -476,17 +511,141 @@ body {
       }
       &-box {
         max-width: 290px;
-        right: -10px;
+        right: 21px;
         top: -8px;
       }
     }
   }
 }
 
-//motto
+// services
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  background-color: $primaryColor;
+  background-image: url("../images/backgroundDesktopLeft.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  @media (max-width: 850px) {
+    height: 100%;
+    background-image: url("../images/backgroundMobileLeft.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__information {
+    text-align: center;
+    margin-top: 1rem;
+    &-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.6rem, 2.8rem, 3rem);
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @media (max-width: 850px) {
+        font-size: 2.1rem;
+      }
+    }
+
+    &-subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: bold;
+      color: $goldColor;
+      text-transform: uppercase;
+      font-size: clamp(1.4rem, 1.9rem, 2rem);
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    &-flex {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 400px;
+      height: 280px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+
+      @media (max-width: 1000px) {
+        width: 350px;
+      }
+
+      @media (max-width: 992px) {
+        width: 300px;
+      }
+
+      @media (max-width: 850px) {
+        width: 80%;
+        height: 200px;
+        &:last-child {
+          margin-bottom: 1.8rem;
+        }
+      }
+
+      &:hover {
+        background-color: #ecebeb;
+      }
+
+      &--image {
+        width: 60px;
+        height: 60px;
+        color: $goldColor;
+        filter: drop-shadow(1.5px 0 1px black);
+      }
+
+      &--title {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        font-size: clamp(1.6rem, 1.8rem, 2rem);
+        border-top: 3px solid $goldColor;
+        width: 300px;
+        padding: 0.5rem;
+        height: 20%;
+
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+          width: 250px;
+        }
+
+        @media (max-width: 850px) {
+          font-size: 1.6rem;
+          width: 300px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.5rem;
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+//motto
 .motto {
-  margin-bottom: 2rem;
   &__title {
     display: flex;
     justify-content: center;
@@ -502,9 +661,10 @@ body {
 
     &-item {
       text-align: center;
-      font-size: clamp(1.6rem, 2.3rem, 2.5rem);
-      font-family: "Montserrat", sans-serif;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(1.6rem, 2.7rem, 2.5rem);
       letter-spacing: 1px;
 
       @media (max-width: 480px) {
@@ -513,15 +673,8 @@ body {
       }
 
       &--modifier {
+        font-family: "Cormorant Garamond", serif;
         font-weight: bold;
-        background: linear-gradient(
-          to right,
-          #161920 0%,
-          $goldColor 50%,
-          #161920 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
     }
   }
@@ -534,25 +687,30 @@ body {
   align-items: center;
   width: 100%;
   height: 100svh;
+  background-image: url("../images/backgroundDesktopRight.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (max-width: 850px) {
     margin-top: 0rem;
+    height: 100%;
+
+    background-image: url("../images/backgroundMobileRight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__main {
-    display: grid;
-    grid-template-columns: repeat(2, 40vw);
-    grid-template-rows: repeat(2, 1fr);
-    margin-top: 2svh auto;
+    &-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    @media (min-width: 1900px) {
-      grid-template-columns: repeat(2, 25vw);
-    }
-
-    @media (max-width: 850px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 25vh);
-      grid-auto-flow: row;
+      @media (max-width: 850px) {
+        flex-direction: column;
+      }
     }
 
     &-item {
@@ -560,16 +718,28 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      text-align: center;
-      background-color: $primaryColor;
-      overflow: hidden;
-      flex: 0 0 100%;
+      width: 100%;
+      max-width: 550px;
+      height: 300px;
+
+      @media (max-width: 1090px) {
+        width: 480px;
+        height: 300px;
+      }
+
+      @media (max-width: 1000px) {
+        width: 440px;
+        height: 300px;
+      }
+
+      @media (max-width: 1000px) {
+        width: 410px;
+        height: 300px;
+      }
 
       @media (max-width: 850px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        width: 100%;
+        height: 200px;
         text-align: center;
       }
 
@@ -583,6 +753,7 @@ body {
         @media (max-width: 850px) {
           margin-top: 0rem;
           padding: 0rem;
+          font-size: 1.1rem;
         }
       }
 
@@ -592,8 +763,10 @@ body {
         padding: 1.3rem;
         font-weight: 400;
         color: $brighterDarkColor;
+
         @media (max-width: 850px) {
           margin-top: 0rem;
+          font-size: 0.9rem;
         }
       }
 

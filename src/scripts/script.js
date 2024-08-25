@@ -4,12 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const servicesLink = document.getElementById("services");
   const dropdownMenu = document.querySelector(".nav__dropdown");
   const arrow = document.querySelector(".nav__link-arrow");
+  const navItems = document.querySelectorAll(".nav__link");
 
   // Funkcja do zamykania menu
   function closeMenu() {
     nav.classList.remove("active");
     hamburger.classList.remove("open");
   }
+  
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
 
   // Toggle całego menu nawigacyjnego
   hamburger.addEventListener("click", function () {

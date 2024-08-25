@@ -7,16 +7,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <title>Restrukturyzacje Karolina Kamińska >> Strona Główna</title>
   </head>
   <body>
-    <!-- nav computer -->
-    <header class="wrapper">
-      <nav class="nav wrapper">
-        <div class="nav__logo">
+    <article class="mainArticle">
+      <!-- header -->
+      <header class="wrapper">
+        <nav class="nav wrapper">
+          <div class="nav__logo">
+            <p>
+              Restrukturyzacje <br />
+              <span
+                style="
+                  color: #fca311;
+                  font-family: 'Charmonman', cursive;
+                  font-weight: bold;
+                "
+                >Kamińska</span
+              >
+            </p>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Strona Główna</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">O Nas</a>
+            </li>
+            <li class="nav__item nav__item--dropdown">
+              <a href="#" class="nav__link" id="services"
+                >Usługi <span class="nav__link-arrow">&#9662;</span></a
+              >
+              <ul class="nav__dropdown">
+                <li class="nav__dropdown-item">
+                  <a href="#" class="nav__dropdown-link"
+                    >Restrukturyzacja Firm</a
+                  >
+                </li>
+                <li class="nav__dropdown-item">
+                  <a href="#" class="nav__dropdown-link"
+                    >Upadłość Konsumencka</a
+                  >
+                </li>
+                <li class="nav__dropdown-item">
+                  <a href="#" class="nav__dropdown-link"
+                    >Upadłość Gospodarcza</a
+                  >
+                </li>
+                <li class="nav__dropdown-item">
+                  <a href="#" class="nav__dropdown-link">Obsługa Firm</a>
+                </li>
+                <li class="nav__dropdown-item">
+                  <a href="#" class="nav__dropdown-link">Mediacje</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Aktualności</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link-contact">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- nav mobile -->
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="logoMobile">
           <p>
             Restrukturyzacje <br />
             <span
@@ -29,65 +92,8 @@
             >
           </p>
         </div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Strona Główna</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">O Nas</a>
-          </li>
-          <li class="nav__item nav__item-contact">
-            <a href="#" class="nav__link">Kontakt</a>
-          </li>
-          <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__link" id="services"
-                >Usługi <span class="nav__link-arrow">&#9662</span></a
-              >
-            <ul class="nav__dropdown">
-              <li class="nav__dropdown-item">
-                <a href="#" class="nav__dropdown-link">Restrukturyzacja Firm</a>
-              </li>
-              <li class="nav__dropdown-item">
-                <a href="#" class="nav__dropdown-link">Upadłość Konsumencka</a>
-              </li>
-              <li class="nav__dropdown-item">
-                <a href="#" class="nav__dropdown-link">Upadłość Gospodarcza</a>
-              </li>
-              <li class="nav__dropdown-item">
-                <a href="#" class="nav__dropdown-link">Obsługa Firm</a>
-              </li>
-              <li class="nav__dropdown-item">
-                <a href="#" class="nav__dropdown-link">Mediacje</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Aktualności</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- nav mobile -->
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <div class="logoMobile">
-        <p>
-         Restrukturyzacje <br />
-          <span
-            style="
-              color: #fca311;
-              font-family: 'Charmonman', cursive;
-              font-weight: bold;
-            "
-            >Kamińska</span
-            >
-          </p>
-        </div>
       </header>
-
-      <!-- header section -->
+      <!-- main section -->
       <main class="main wrapper">
         <div class="left">
           <h1 class="left__title">
@@ -148,41 +154,184 @@
           <div class="right-box"></div>
         </div>
       </main>
+    </article>
 
+    <!-- services -->
+    <section class="services">
+      <div class="services__information">
+        <h2 class="services__information-title">W czym mogę pomóc?</h2>
+        <p class="services__information-subtitle">usługi</p>
+      </div>
+      <div class="services__container">
+        <div class="services__container-flex">
+          <a class="services__container-item">
+            <svg
+              class="services__container-item--image"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-activity"
+            >
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <h3 class="services__container-item--title">
+              Restrukturyzacja firm
+            </h3>
+          </a>
+          <a class="services__container-item">
+            <svg
+              class="services__container-item--image"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-sliders"
+            >
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <h3 class="services__container-item--title">Obsługa firm</h3>
+          </a>
+          <a class="services__container-item">
+            <svg
+              class="services__container-item--image"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-mic"
+            >
+              <path
+                d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+              ></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <h3 class="services__container-item--title">Mediacje</h3>
+          </a>
+        </div>
+        <div class="services__container-flex">
+          <a class="services__container-item">
+            <svg
+              class="services__container-item--image"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-book-open"
+            >
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <h3 class="services__container-item--title">
+              Upadłość konsumencka
+            </h3>
+          </a>
+          <a class="services__container-item">
+            <svg
+              class="services__container-item--image"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-archive"
+            >
+              <polyline points="21 8 21 21 3 21 3 8"></polyline>
+              <rect x="1" y="3" width="22" height="5"></rect>
+              <line x1="10" y1="12" x2="14" y2="12"></line>
+            </svg>
+            <h3 class="services__container-item--title">
+              Upadłość gospodarcza
+            </h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- motto -->
     <section class="motto">
       <div class="motto__title">
-        <h2 class="motto__title-item">Pomagam w <strong class="motto__title-item--modifier">oddłużaniu</strong> Firm i spółek</h2>
+        <h3 class="motto__title-item">
+          Pomagam w
+          <strong class="motto__title-item--modifier">oddłużaniu</strong> Firm i
+          spółek
+        </h3>
       </div>
     </section>
 
+    <!-- about -->
     <section class="about" id="about">
       <div class="about__main wrapper">
-          <div class="about__main-item first"><img class="about__main-photo" src="https://picsum.photos/500/300" alt=""></div>
+        <div class="about__main-flex">
+          <div class="about__main-item first">
+            <img
+              class="about__main-photo"
+              src="https://picsum.photos/380/200"
+              alt=""
+            />
+          </div>
           <div class="about__main-item second">
-            <p class="about__main-item--subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tenetur, dolorem, velit laborum adipisci unde aut explicabo saepe doloribus minus quae nihil consequuntur.</p> 
-            <p class="about__main-item--titles">Doradca Restrukturyzacyjny & Radca Prawny</p>
+            <p class="about__main-item--subTitle">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Perferendis tenetur, dolorem, velit laborum adipisci unde aut
+              explicabo saepe doloribus minus quae nihil consequuntur.
+            </p>
+            <p class="about__main-item--titles">
+              Doradca Restrukturyzacyjny & Radca Prawny
+            </p>
           </div>
-          <div class="about__main-item third">          
-            <p class="about__main-item--subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tenetur, dolorem, velit laborum adipisci unde aut explicabo saepe doloribus minus consequuntur.</p> 
+        </div>
+        <div class="about__main-flex">
+          <div class="about__main-item third">
+            <p class="about__main-item--subTitle">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Perferendis tenetur, dolorem, velit laborum adipisci unde aut
+              explicabo saepe doloribus minus consequuntur.
+            </p>
+            <p class="about__main-item--titles">
+              Doradca Restrukturyzacyjny & Radca Prawny
+            </p>
           </div>
-          <div class="about__main-item fourth"> <p>
-            Restrukturyzacje <br />
-            <span
-              style="
-                color: #fca311;
-                font-family: 'Charmonman', cursive;
-                font-weight: bold;
-              "
-              >Kamińska</span
-            >
-          </p></div>
+          <div class="about__main-item fourth">
+            <p>
+              Restrukturyzacje <br />
+              <span
+                style="
+                  color: #fca311;
+                  font-family: 'Charmonman', cursive;
+                  font-weight: bold;
+                "
+                >Kamińska</span
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-
-    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-    <script>
-        smoothscroll.polyfill();
-    </script>
   </body>
   <script src="dist/js/script.min.js"></script>
 </html>
