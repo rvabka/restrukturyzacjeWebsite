@@ -716,7 +716,6 @@ body {
     &-item {
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-direction: column;
       width: 100%;
       max-width: 550px;
@@ -744,7 +743,7 @@ body {
       }
 
       &--subTitle {
-        font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+        font-size: clamp(1.2rem, 1.4rem, 1.6rem);
         text-wrap: wrap;
         padding: 1.3rem;
         margin-top: -2rem;
@@ -758,15 +757,18 @@ body {
       }
 
       &--titles {
-        font-size: clamp(1rem, 1.2rem, 1.6rem);
+        font-size: clamp(1.3rem, 1.4rem, 1.5rem);
         text-wrap: wrap;
         padding: 1.3rem;
         font-weight: 400;
         color: $brighterDarkColor;
+        text-align: right;
+        font-style: italic;
+        font-family: "Cormorant Garamond", serif;
 
         @media (max-width: 850px) {
           margin-top: 0rem;
-          font-size: 0.9rem;
+          font-size: 1.1rem;
         }
       }
 
@@ -781,6 +783,7 @@ body {
         font-size: clamp(1.9rem, 2.1rem, 2.4rem);
         box-shadow: 6px 6px 10px 3px #dddddd;
         background-color: $brighterDarkColor;
+        text-align: center;
         color: $primaryColor;
       }
 
