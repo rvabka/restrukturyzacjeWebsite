@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector(".nav");
   const servicesLink = document.getElementById("services");
   const dropdownMenu = document.querySelector(".nav__dropdown");
+  const dropdownLink = document.querySelectorAll(".nav__dropdown-link");
   const arrow = document.querySelector(".nav__link-arrow");
   const navItems = document.querySelectorAll(".nav__link");
 
@@ -11,8 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.remove("active");
     hamburger.classList.remove("open");
   }
-  
+
   navItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      if (event.target != servicesLink) {
+        closeMenu();
+      }
+    });
+  });
+
+  dropdownLink.forEach((item) => {
     item.addEventListener("click", () => {
       closeMenu();
     });

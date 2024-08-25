@@ -157,11 +157,12 @@ body {
   @media (max-width: 850px) {
     position: fixed;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     top: 0;
     left: -270px;
     width: 250px;
-    height: 100%;
+    height: 100vh;
     background: $primaryColor;
     z-index: 100;
     transition: left 0.3s ease;
@@ -178,6 +179,7 @@ body {
       text-align: center;
       flex-direction: column;
       width: 100%;
+      margin-top: -15rem;
     }
 
     &__link {
