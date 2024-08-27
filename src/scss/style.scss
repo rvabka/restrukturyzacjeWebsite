@@ -549,7 +549,7 @@ body {
       text-transform: uppercase;
 
       @media (max-width: 850px) {
-        font-size: 2.1rem;
+        font-size: clamp(1.5rem, 1.9rem, 1.8rem);
       }
     }
 
@@ -559,6 +559,10 @@ body {
       color: $goldColor;
       text-transform: uppercase;
       font-size: clamp(1.4rem, 1.9rem, 2rem);
+
+      @media (max-width: 850px) {
+        font-size: clamp(1.5rem, 1.9rem, 1.8rem);
+      }
     }
   }
 
@@ -632,7 +636,7 @@ body {
         }
 
         @media (max-width: 850px) {
-          font-size: 1.6rem;
+          font-size: clamp(1.5rem, 1.7rem, 1.8rem);
           width: 300px;
         }
 
@@ -811,5 +815,175 @@ body {
         height: 25vh;
       }
     }
+  }
+}
+
+// news
+.news {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-image: url("../images/backgroundDesktopLeft.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 850px) {
+    background-image: url("../images/backgroundMobileLeft.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0rem;
+    height: 100%;
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 10vh;
+
+    @media (max-width: 1200px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 850px) {
+      text-align: center;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.5rem, 2.4rem, 2.7rem);
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @media (max-width: 1150px) {
+        font-size: clamp(1.5rem, 1.9rem, 1.8rem);
+      }
+    }
+
+    &__subTitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.2rem, 1.4rem, 1.5rem);
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @media (max-width: 1150px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__button {
+      font-size: clamp(1.1rem, 1.3rem, 1.5rem);
+      padding: 0.9rem;
+      width: 400px;
+      border-radius: 5px;
+      background-color: $goldColor;
+      border: 2px solid $goldColor;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        -webkit-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        -moz-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 1150px) {
+        font-size: 1.1rem;
+        width: 300px;
+      }
+    }
+  }
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 3rem;
+    width: 100%;
+
+    .article {
+      width: 400px;
+
+      @media (max-width: 1150px) {
+        width: 100%;
+      }
+
+      &__link {
+        position: relative;
+        display: block;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+
+        &-img {
+          object-fit: cover;
+          transition: all 0.3s ease;
+          height: 100%;
+
+          &:hover {
+            transform: scale(1.05);
+            filter: grayscale(50%);
+          }
+        }
+      }
+
+      &__title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.1rem, 1.3rem, 1.5rem);
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      &__date {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: clamp(1.1rem, 1.2rem, 1.4rem);
+      }
+
+      &__description {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.1rem, 1.3rem, 1.5rem);
+      }
+    }
+  }
+}
+
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: $goldColor;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+  z-index: 2000;
+
+  &:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+    -moz-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+    box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
+
+    svg {
+      transform: rotate(360deg);
+    }
+  }
+
+  & svg {
+    transition: all 0.4s ease;
   }
 }
