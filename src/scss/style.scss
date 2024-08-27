@@ -708,6 +708,11 @@ body {
   }
 
   &__main {
+    &-photo {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
     &-flex {
       display: flex;
       justify-content: center;
@@ -723,8 +728,18 @@ body {
       justify-content: center;
       flex-direction: column;
       width: 100%;
-      max-width: 550px;
+      max-width: 750px;
       height: 300px;
+
+      @media (max-width: 1200px) {
+        width: 550px;
+        height: 300px;
+      }
+
+      @media (max-width: 1150px) {
+        width: 500px;
+        height: 300px;
+      }
 
       @media (max-width: 1090px) {
         width: 480px;
@@ -742,7 +757,7 @@ body {
       }
 
       @media (max-width: 850px) {
-        width: 100%;
+        width: 350px;
         height: 180px;
         text-align: center;
       }
