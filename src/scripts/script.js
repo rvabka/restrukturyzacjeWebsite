@@ -35,8 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle dropdown menu
   servicesLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation(); // Zapobiega propagacji kliknięcia do document
+    const isWideScreen = window.innerWidth < 850;
+
+    if (isWideScreen) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
     dropdownMenu.classList.toggle("visible");
     if (dropdownMenu.classList.contains("visible")) {
