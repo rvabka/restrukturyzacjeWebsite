@@ -20,6 +20,21 @@ body {
   overflow-x: hidden;
 }
 
+.mainArticle {
+  position: relative;
+  background-image: url("../images/backgroundDesktopRight.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 850px) {
+    background-image: url("../images/backgroundMobileRight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 // navigation
 .nav {
   display: flex;
