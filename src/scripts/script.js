@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  AOS.init();
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector(".nav");
   const servicesLink = document.getElementById("services");

@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <title>Restrukturyzacje Karolina Kamińska >> Strona Główna</title>
   </head>
   <body>
@@ -158,8 +162,12 @@
     <!-- services -->
     <section class="services" id="uslugi">
       <div class="services__information">
-        <h2 class="services__information-title">W czym mogę pomóc?</h2>
-        <p class="services__information-subtitle">usługi</p>
+        <h2 class="services__information-title" data-aos="fade-right">
+          W czym mogę pomóc?
+        </h2>
+        <p class="services__information-subtitle" data-aos="fade-left">
+          usługi
+        </p>
       </div>
       <div class="services__container">
         <div class="services__container-flex">
@@ -286,7 +294,7 @@
     <section class="about" id="o-nas">
       <div class="about__main wrapper">
         <div class="about__main-flex">
-          <div class="about__main-item first">
+          <div class="about__main-item first" data-aos="fade-right">
             <img
               class="about__main-photo"
               src="https://picsum.photos/380/300"
@@ -317,7 +325,7 @@
               & Radca Prawny
             </p>
           </div>
-          <div class="about__main-item fourth">
+          <div class="about__main-item fourth" data-aos="fade-left">
             <p>
               Restrukturyzacje <br />
               <span
@@ -562,4 +570,5 @@
     </button>
   </body>
   <script src="dist/js/script.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </html>
