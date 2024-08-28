@@ -80,12 +80,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+  const footer = document.querySelector("footer");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const footerTop = footer.offsetTop;
+    const footerHeight = footer.offsetHeight;
+
+    // Pokaż lub ukryj przycisk przewijania w górę
+    if (scrollPosition > 200) {
       scrollToTopBtn.style.display = "block";
     } else {
       scrollToTopBtn.style.display = "none";
+    }
+
+    // Sprawdzenie, czy przycisk jest w obrębie sekcji footer
+    if (
+      scrollPosition + windowHeight > footerTop &&
+      scrollPosition < footerTop + footerHeight
+    ) {
+      scrollToTopBtn.style.backgroundColor = "#f5f5f5"; // Zmień kolor dla sekcji footer
+      scrollToTopBtn.style.color = "#fcb900";
+    } else {
+      scrollToTopBtn.style.backgroundColor = ""; // Przywróć domyślny kolor
+      scrollToTopBtn.style.color = "";
     }
   });
 

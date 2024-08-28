@@ -244,7 +244,6 @@ body {
   top: 20px;
   font-size: clamp(1rem, 1.2rem, 1.45rem);
 }
-
 @media (max-width: 850px) {
   .logoMobile {
     display: block;
@@ -329,6 +328,10 @@ body {
         letter-spacing: 3px;
       }
 
+      @media (max-width: 1150px) {
+        font-size: clamp(1.7rem, 3rem, 3.3rem);
+      }
+
       @media (max-width: 850px) {
         margin-bottom: 0.6rem;
         margin-top: 3rem;
@@ -402,119 +405,55 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
+    display: inline-block;
+    max-width: 450px;
+    max-height: 600px;
+
+    @media (max-width: 850px) {
+      width: 40%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 780px) {
+      width: 50%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      width: 60%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      width: 65%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 500px) {
+      width: 70%;
+      max-width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 18px;
+      width: 100%;
+      height: 100%;
+      background-color: $goldColor;
+      z-index: 0;
+      border-radius: 10px;
+    }
 
     &__img {
+      position: relative;
+      display: block;
       width: 100%;
-      max-width: 450px;
       max-height: 600px;
       height: auto;
       border-radius: 10px;
-      z-index: 4;
-    }
-
-    &-box {
-      position: absolute;
-      width: 100%;
-      max-width: 480px;
-      height: 100%;
-      background-color: $goldColor;
-      right: 5px;
-      top: -20px;
-      z-index: 3;
-      border-radius: 10px;
-      box-shadow: 6px 6px 10px 3px #dddddd;
-    }
-
-    @media (max-width: 1200px) {
-      width: 50%;
-
-      &__img {
-        max-width: 400px;
-      }
-
-      &-box {
-        max-width: 400px;
-        right: 40px;
-        top: -15px;
-      }
-    }
-
-    @media (max-width: 1100px) {
-      width: 50%;
-
-      &__img {
-        max-width: 400px;
-      }
-      &-box {
-        max-width: 400px;
-        right: 20px;
-        top: -15px;
-      }
-    }
-
-    @media (max-width: 1050px) {
-      width: 50%;
-
-      &__img {
-        max-width: 400px;
-      }
-      &-box {
-        max-width: 400px;
-        right: 5px;
-        top: -15px;
-      }
-    }
-
-    @media (max-width: 992px) {
-      width: 60%;
-
-      &__img {
-        max-width: 360px;
-      }
-      &-box {
-        max-width: 360px;
-        right: 60px;
-        top: -10px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: 80%;
-
-      &__img {
-        max-width: 320px;
-      }
-      &-box {
-        max-width: 320px;
-        right: 70px;
-        top: -10px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      width: 100%;
-
-      &__img {
-        max-width: 280px;
-      }
-      &-box {
-        max-width: 280px;
-        right: 60px;
-        top: -8px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      width: 100%;
-
-      &__img {
-        max-width: 280px;
-      }
-      &-box {
-        max-width: 290px;
-        right: 21px;
-        top: -8px;
-      }
+      z-index: 1;
     }
   }
 }
@@ -658,7 +597,7 @@ body {
     flex-direction: column;
     height: 200px;
     width: 100%;
-    background-image: url("../images/aboutTitle.png");
+    background-image: url("../images/backgroundFooter.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -667,7 +606,7 @@ body {
     &-item {
       text-align: center;
       font-family: "Cormorant Garamond", serif;
-      font-weight: 400;
+      font-weight: 300;
       text-transform: uppercase;
       font-size: clamp(1.6rem, 2.7rem, 2.5rem);
       letter-spacing: 1px;
@@ -927,8 +866,8 @@ body {
     .article {
       width: 400px;
 
-      @media (max-width: 1150px) {
-        width: 100%;
+      @media (max-width: 850px) {
+        width: 350px;
       }
 
       &__link {
@@ -969,6 +908,112 @@ body {
         font-family: "Cormorant Garamond", serif;
         font-size: clamp(1.1rem, 1.3rem, 1.5rem);
       }
+    }
+  }
+}
+
+.footer {
+  background-image: url("../images/backgroundFooter.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 10px;
+  text-align: center;
+
+  @media (max-width: 900px) {
+    height: 100%;
+  }
+
+  &__logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    span {
+      color: $primaryColor;
+      font-size: 1.2rem;
+      font-family: "Charmonman", cursive;
+    }
+  }
+
+  .containter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid $darkColor;
+
+    @media (max-width: 900px) {
+      padding-top: 0rem;
+      margin-top: 0px;
+      flex-wrap: wrap;
+    }
+
+    &__link {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $darkColor;
+
+      @media (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        width: 100%;
+      }
+      @media (max-width: 450px) {
+        justify-content: start;
+      }
+      
+      &-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $primaryColor;
+        padding: 10px;
+        margin-right: 0.5rem;
+
+        svg {
+          color: $goldColor;
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      &-title {
+        font-weight: 300;
+        font-size: clamp(1rem, 1.1rem, 1.3rem);
+        text-align: left;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .createdBy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    bottom: 10px;
+    margin-top: 1rem;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    &-icon {
+      color: $primaryColor;
     }
   }
 }
