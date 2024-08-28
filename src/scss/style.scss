@@ -4,43 +4,6 @@ $brighterDarkColor: #424547;
 $goldColor: #fcb900;
 @import "navFooter.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.wrapper {
-  max-width: 1400px;
-  margin: auto;
-}
-
-.mainArticle {
-  position: relative;
-  background-image: url("../images/backgroundDesktopRight.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (max-width: 850px) {
-    background-image: url("../images/backgroundMobileRight.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-body {
-  position: relative;
-  color: $darkColor;
-  overflow-x: hidden;
-}
-
 // main
 .main {
   display: flex;
@@ -49,6 +12,7 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden;
   height: 90vh;
 
   @media (max-width: 1200px) {
@@ -245,6 +209,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100svh;
+  overflow-x: hidden;
   background-color: $primaryColor;
   background-image: url("../images/backgroundDesktopLeft.png");
   background-size: cover;
@@ -308,6 +273,8 @@ body {
       cursor: pointer;
       text-align: center;
       border-radius: 10px;
+      text-decoration: none;
+      color: $darkColor;
       transition: all 0.3s ease;
 
       @media (max-width: 1000px) {
@@ -370,6 +337,7 @@ body {
 
 //motto
 .motto {
+  overflow-x: hidden;
   &__title {
     display: flex;
     justify-content: center;
@@ -409,6 +377,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   width: 100%;
   height: 100svh;
   background-image: url("../images/backgroundDesktopRight.png");
@@ -561,6 +530,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 
   @media (max-width: 850px) {
     background-image: url("../images/backgroundMobileLeft.png");
@@ -657,6 +627,8 @@ body {
         border-radius: 10px;
         overflow: hidden;
         margin-bottom: 0.5rem;
+        text-decoration: none;
+        color: $darkColor;
 
         &-img {
           object-fit: cover;

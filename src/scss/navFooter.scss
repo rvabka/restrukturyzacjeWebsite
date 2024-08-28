@@ -3,6 +3,23 @@ $darkColor: #262a35;
 $brighterDarkColor: #424547;
 $goldColor: #fcb900;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  color: $darkColor;
+  overflow-x: hidden;
+}
+
 // navigation
 .nav {
   display: flex;
@@ -169,6 +186,11 @@ $goldColor: #fcb900;
   left: 0;
 }
 
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+
 // hamburger button
 .hamburger {
   position: absolute;
@@ -233,6 +255,7 @@ $goldColor: #fcb900;
   background-repeat: no-repeat;
   padding: 20px 10px;
   text-align: center;
+  overflow-x: hidden;
 
   @media (max-width: 900px) {
     height: 100%;
