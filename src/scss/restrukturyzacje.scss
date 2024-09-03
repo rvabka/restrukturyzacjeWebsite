@@ -1,8 +1,4 @@
-$primaryColor: #f5f5f5;
-$darkColor: #262a35;
-$brighterDarkColor: #424547;
-$goldColor: #fcb900;
-@import "navFooter.scss";
+@import "common.scss";
 
 body {
   position: relative;
@@ -48,10 +44,11 @@ body {
     }
     &-img {
       border-radius: 10px;
-      border: 1px solid $goldColor;
       margin-bottom: 2.5rem;
       max-width: 100%;
+      width: 800px;
       height: auto;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     &-article {

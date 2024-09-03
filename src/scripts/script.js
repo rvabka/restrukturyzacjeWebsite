@@ -8,6 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const arrow = document.querySelector(".nav__link-arrow");
   const navItems = document.querySelectorAll(".nav__link");
 
+
+  if (window.innerWidth > 850) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 150) {
+        nav.style.position = "fixed";
+        nav.style.backgroundColor = "#f5f5f5";
+        nav.style.borderRadius = "25px";
+        nav.style.marginTop = "5px";
+      } else {
+        nav.style.position = "relative";
+        nav.style.backgroundColor = "";
+        nav.style.borderRadius = "";
+        nav.style.marginTop = "0";
+      }
+    });
+  }
+
   // Funkcja do zamykania menu
   function closeMenu() {
     nav.classList.remove("active");
@@ -41,13 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isWideScreen) {
       event.preventDefault();
       event.stopPropagation();
-    }
-
-    dropdownMenu.classList.toggle("visible");
-    if (dropdownMenu.classList.contains("visible")) {
-      arrow.innerHTML = "&#9652;"; // Strzałka w górę
-    } else {
-      arrow.innerHTML = "&#9662;"; // Strzałka w dół
+      dropdownMenu.classList.toggle("visible");
+      if (dropdownMenu.classList.contains("visible")) {
+        arrow.innerHTML = "&#9652;"; // Strzałka w górę
+      } else {
+        arrow.innerHTML = "&#9662;"; // Strzałka w dół
+      }
     }
   });
 

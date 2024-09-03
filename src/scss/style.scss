@@ -1,8 +1,4 @@
-$primaryColor: #f5f5f5;
-$darkColor: #262a35;
-$brighterDarkColor: #424547;
-$goldColor: #fcb900;
-@import "navFooter.scss";
+@import "common.scss";
 
 // main
 .main {
@@ -12,7 +8,7 @@ $goldColor: #fcb900;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 90vh;
 
   @media (max-width: 1200px) {
@@ -106,6 +102,8 @@ $goldColor: #fcb900;
         border-radius: 5px;
         border: 2px solid $goldColor;
         cursor: pointer;
+        color: $darkColor;
+        text-decoration: none;
         transition: all 0.3s ease;
 
         &:hover {
@@ -150,7 +148,7 @@ $goldColor: #fcb900;
     align-items: center;
     justify-content: center;
     width: 40%;
-    max-width: 450px;
+    max-width: 400px;
     max-height: 600px;
 
     @media (max-width: 850px) {
@@ -588,6 +586,9 @@ $goldColor: #fcb900;
       background-color: $goldColor;
       border: 2px solid $goldColor;
       cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      color: $darkColor;
       transition: all 0.3s ease;
 
       &:hover {

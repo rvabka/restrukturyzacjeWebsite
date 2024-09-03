@@ -38,9 +38,6 @@
             <li class="nav__item">
               <a href="#" class="nav__link">Strona Główna</a>
             </li>
-            <li class="nav__item">
-              <a href="#o-nas" class="nav__link">O Nas</a>
-            </li>
             <li class="nav__item nav__item--dropdown">
               <a href="#uslugi" class="nav__link" id="services"
                 >Usługi <span class="nav__link-arrow">&#9662;</span></a
@@ -48,42 +45,50 @@
               <ul class="nav__dropdown">
                 <li class="nav__dropdown-item">
                   <a
-                    href="./pages/restrukturyzacje-firm.html"
+                    href="./uslugi/restrukturyzacje-firm.html"
                     class="nav__dropdown-link"
                     >Restrukturyzacja Firm</a
                   >
                 </li>
                 <li class="nav__dropdown-item">
                   <a
-                    href="./pages/upadlosc-konsumencka.html"
+                    href="./uslugi/upadlosc-konsumencka.html"
                     class="nav__dropdown-link"
                     >Upadłość Konsumencka</a
                   >
                 </li>
                 <li class="nav__dropdown-item">
                   <a
-                    href="./pages/upadlosc-gospodarcza.html"
+                    href="./uslugi/upadlosc-gospodarcza.html"
                     class="nav__dropdown-link"
                     >Upadłość Gospodarcza</a
                   >
                 </li>
                 <li class="nav__dropdown-item">
-                  <a href="./pages/obsluga-firm.html" class="nav__dropdown-link"
+                  <a
+                    href="./uslugi/obsluga-firm.html"
+                    class="nav__dropdown-link"
                     >Obsługa Firm</a
                   >
                 </li>
                 <li class="nav__dropdown-item">
-                  <a href="./pages/mediacje.html" class="nav__dropdown-link"
+                  <a href="./uslugi/mediacje.html" class="nav__dropdown-link"
                     >Mediacje</a
                   >
                 </li>
               </ul>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Aktualności</a>
+              <a href="#o-nas" class="nav__link">O Nas</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link-contact">Kontakt</a>
+              <a href="#aktualnosci" class="nav__link">Aktualności</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Komunikaty</a>
+            </li>
+            <li class="nav__item">
+              <a href="#kontakt" class="nav__link-contact">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -121,7 +126,10 @@
             Cupiditate totam exercitationem debitis quae alias? Qui hic quis a!
           </p>
           <div class="left__button">
-            <a class="left__button-item left__button-item-contact">
+            <a
+              href="#kontakt"
+              class="left__button-item left__button-item-contact"
+            >
               Skontaktuj się
               <span
                 ><svg
@@ -141,7 +149,7 @@
                 </svg>
               </span>
             </a>
-            <a class="left__button-item">
+            <a href="#o-nas" class="left__button-item">
               O kancelarii
               <span
                 ><svg
@@ -182,7 +190,7 @@
       <div class="services__container">
         <div class="services__container-flex">
           <a
-            href="./pages/restrukturyzacje-firm.html"
+            href="./uslugi/restrukturyzacje-firm.html"
             class="services__container-item"
           >
             <svg
@@ -202,7 +210,7 @@
               Restrukturyzacja firm
             </h3>
           </a>
-          <a href="/pages/obsluga-firm.html" class="services__container-item">
+          <a href="/uslugi/obsluga-firm.html" class="services__container-item">
             <svg
               class="services__container-item--image"
               xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +234,7 @@
             </svg>
             <h3 class="services__container-item--title">Obsługa firm</h3>
           </a>
-          <a href="/pages/mediacje.html" class="services__container-item">
+          <a href="/uslugi/mediacje.html" class="services__container-item">
             <svg
               class="services__container-item--image"
               xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +258,7 @@
         </div>
         <div class="services__container-flex">
           <a
-            href="/pages/upadlosc-konsumencka.html"
+            href="/uslugi/upadlosc-konsumencka.html"
             class="services__container-item"
           >
             <svg
@@ -272,7 +280,7 @@
             </h3>
           </a>
           <a
-            href="/pages/upadlosc-gospodarcza.html"
+            href="/uslugi/upadlosc-gospodarcza.html"
             class="services__container-item"
           >
             <svg
@@ -362,20 +370,37 @@
     </section>
 
     <!-- news -->
-    <section class="news">
+    <section class="news" id="aktualnosci">
       <div class="information wrapper">
         <h4 class="information__title">Restrukturyzacja w Praktyce</h4>
         <p class="information__subTitle">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Voluptatibus, aspernatur animi quisquam fuga quod quae ullam!
         </p>
-        <button class="information__button">Poznaj moje publikacje</button>
+        <a href="./publikacje/aktualnosci.html" class="information__button"
+          >Poznaj moje publikacje</a
+        >
       </div>
       <div class="articles wrapper">
         <div class="article">
+          <a href="./publikacje/wpis/tytul--wpisu--sth.html" class="article__link">
+            <img
+              src="https://picsum.photos/500/250"
+              alt=""
+              class="article__link-img"
+            />
+          </a>
+          <h5 class="article__title">Dlaczego warto rozważyć restrukturyzację firmy?</h5>
+          <p class="article__date">27.08.2024</p>
+          <p class="article__description">
+            Restrukturyzacja firmy to proces, który może przynieść liczne
+              korzyści, zarówno w sytuacji...
+          </p>
+        </div>
+        <div class="article">
           <a href="#" class="article__link">
             <img
-              src="https://picsum.photos/400/250"
+              src="https://picsum.photos/500/250"
               alt=""
               class="article__link-img"
             />
@@ -390,7 +415,7 @@
         <div class="article">
           <a href="#" class="article__link">
             <img
-              src="https://picsum.photos/400/250"
+              src="https://picsum.photos/500/250"
               alt=""
               class="article__link-img"
             />
@@ -405,7 +430,7 @@
         <div class="article">
           <a href="#" class="article__link">
             <img
-              src="https://picsum.photos/400/250"
+              src="https://picsum.photos/500/250"
               alt=""
               class="article__link-img"
             />
@@ -420,7 +445,7 @@
         <div class="article">
           <a href="#" class="article__link">
             <img
-              src="https://picsum.photos/400/250"
+              src="https://picsum.photos/500/250"
               alt=""
               class="article__link-img"
             />
@@ -435,22 +460,7 @@
         <div class="article">
           <a href="#" class="article__link">
             <img
-              src="https://picsum.photos/400/250"
-              alt=""
-              class="article__link-img"
-            />
-          </a>
-          <h5 class="article__title">Lorem, ipsum dolor.</h5>
-          <p class="article__date">27.08.2024</p>
-          <p class="article__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus modi, ea perferendis impedit tempora repellendus...
-          </p>
-        </div>
-        <div class="article">
-          <a href="#" class="article__link">
-            <img
-              src="https://picsum.photos/400/250"
+              src="https://picsum.photos/500/250"
               alt=""
               class="article__link-img"
             />
@@ -465,7 +475,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="kontakt">
       <p class="footer__logo">
         Restrukturyzacje<br />
         <span style="font-family: 'Charmonman', cursive; font-weight: bold"
