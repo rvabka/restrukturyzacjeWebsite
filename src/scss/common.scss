@@ -280,6 +280,24 @@ body {
   }
 }
 
+//map 
+
+.map {
+  &-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.6rem, 2.8rem, 3rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $goldColor;
+    padding: 1rem;
+
+    @media (max-width: 850px) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
 // footer
 .footer {
   background-image: url("../images/backgroundFooter.png");
