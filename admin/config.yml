@@ -12,9 +12,11 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+  - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Opis", name: "description", widget: "text" }
+      - { label: "Treść", name: "body", widget: "markdown" }
+      - { label: "Obrazek wyróżniający", name: "thumbnail", widget: "image" }
       - {
           name: "meta_description",
           label: "Meta Description",
