@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
     <title>Netlify CMS</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
     <script>
-      CMS.init();
+      if (window.NetlifyCMS) {
+        window.NetlifyCMS.init();
+      }
     </script>
   </body>
 </html>
