@@ -68,6 +68,22 @@ body {
       width: 75%;
       max-width: 700px;
 
+      p {
+        font-size: clamp(1.5rem, 1.7rem, 2rem);
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        margin-bottom: 0.7em;
+      }
+
+      h3 {
+        font-size: clamp(1.7rem, 3.3rem, 3.4rem);
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        letter-spacing: 1.3px;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+
       @media (max-width: 850px) {
         border-bottom: 3px solid $goldColor;
         width: 100%;
@@ -121,25 +137,24 @@ body {
         }
       }
 
-      &__list {
+      ul {
         list-style: circle;
         margin-left: 1.2rem;
+      }
+      li {
+        font-size: clamp(1.5rem, 1.7rem, 2rem);
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        margin-bottom: 0.3rem;
 
-        &-item {
+        &:last-child {
+          margin-bottom: 0.7rem;
+        }
+
+        strong {
           font-size: clamp(1.5rem, 1.7rem, 2rem);
           font-family: "Cormorant Garamond", serif;
-          font-weight: 400;
-          margin-bottom: 0.3rem;
-
-          &:last-child {
-            margin-bottom: 0.7rem;
-          }
-
-          strong {
-            font-size: clamp(1.5rem, 1.7rem, 2rem);
-            font-family: "Cormorant Garamond", serif;
-            font-weight: bold;
-          }
+          font-weight: bold;
         }
       }
 
