@@ -4,6 +4,7 @@
     "build": "eleventy"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "browser-sync": "^2.29.3",
