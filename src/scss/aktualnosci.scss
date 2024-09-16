@@ -98,15 +98,17 @@ body {
       &__title {
         font-family: "Cormorant Garamond", serif;
         font-size: clamp(1.1rem, 1.3rem, 1.5rem);
-        font-weight: 300;
+        font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 0.5rem;
+        text-align: center;
       }
 
       &__date {
-        font-weight: bold;
+        font-weight: 400;
         margin-bottom: 0.5rem;
         font-size: clamp(1.1rem, 1.2rem, 1.4rem);
+        text-decoration: underline;
       }
 
       &__description {
