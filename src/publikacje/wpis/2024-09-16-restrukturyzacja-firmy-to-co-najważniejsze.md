@@ -5,7 +5,7 @@ author: Karolina Kaminska
 description: Odkryj kluczowe kroki w procesie restrukturyzacji firmy. Dowiedz
   się, jak skutecznie przeprowadzić transformację organizacyjną i jakie korzyści
   można z tego czerpać.
-date: 2024-09-16T19:41:00.000Z
+date: 2024-09-16T19:42:00.000Z
 tags:
   - post
 image: https://picsum.photos/500/250?random=3
