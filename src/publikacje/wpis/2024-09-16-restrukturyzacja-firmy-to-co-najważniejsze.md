@@ -1,5 +1,5 @@
 ---
-title: "Restrukturyzacja firmy: To co najważniejsze"
+title: "Restrukturyzacja firmy: To co najważniejsze w restrukturyzacji"
 subtitle: Strategie restrukturyzacji
 author: Karolina Kaminska
 description: Odkryj kluczowe kroki w procesie restrukturyzacji firmy. Dowiedz
