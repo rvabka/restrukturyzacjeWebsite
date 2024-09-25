@@ -32,10 +32,16 @@ collections:
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Tagi", name: "tags", widget: "list", default: ["sale"] }
       - { label: "Główne zdjęcie", name: "mainImage", widget: "image" }
-      - { label: "Opis głównego zdjęcia", name: "mainImageAlt", widget: "string" }
-      - { label: "Dodatkowe zdjęcia", name: "images", widget: "list",
-          fields:
-            - { label: "Zdjęcie", name: "image", widget: "image" }
-            - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
+      - {
+          label: "Opis głównego zdjęcia",
+          name: "mainImageAlt",
+          widget: "string",
         }
+      - label: "Dodatkowe zdjęcia"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
