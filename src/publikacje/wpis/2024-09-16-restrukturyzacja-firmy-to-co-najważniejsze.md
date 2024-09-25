@@ -1,11 +1,11 @@
 ---
-title: "Restrukturyzacja firmy: To co najważniejsze"
+title: "Restrukturyzacja firmy: To co super super istotne"
 subtitle: Strategie restrukturyzacji
 author: Karolina Kaminska
 description: Odkryj kluczowe kroki w procesie restrukturyzacji firmy. Dowiedz
   się, jak skutecznie przeprowadzić transformację organizacyjną i jakie korzyści
   można z tego czerpać.
-date: 2024-09-16T19:55:00.000Z
+date: 2024-09-16T20:05:00.000Z
 tags:
   - post
 image: https://picsum.photos/500/250?random=3
