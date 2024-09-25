@@ -14,6 +14,13 @@ module.exports = function (eleventyConfig) {
       .getFilteredByGlob("src/publikacje/wpis/*.md")
       .reverse();
   });
+
+  eleventyConfig.addCollection("sell", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/komunikaty/ogloszenia/*.md")
+      .reverse();
+  });
+
   return {
     dir: {
       input: "src",

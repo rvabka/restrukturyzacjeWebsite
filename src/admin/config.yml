@@ -11,11 +11,26 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Tytuł na pasku", name: "metaTitle", widget: "string" }
       - { label: "Podtytuł", name: "subtitle", widget: "string" }
       - { label: "Autor", name: "author", widget: "string" }
       - { label: "Opis", name: "description", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Tagi", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Zdjecie", name: "image", widget: "image" }
-      - { label: "Opis zdjecia", name: "imageAlt", widget: "string" }
+      - { label: "Zdjęcie", name: "image", widget: "image" }
+      - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "ogloszenia-sprzedazy"
+    label: "Ogłoszenia Sprzedaży"
+    folder: "src/komunikaty/ogloszenia"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Cena", name: "price", widget: "string" }
+      - { label: "Opis", name: "description", widget: "text" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Tagi", name: "tags", widget: "list", default: ["ogloszenie"] }
+      - { label: "Zdjęcie", name: "image", widget: "image" }
+      - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }

@@ -1,6 +1,8 @@
 ---
-title: My Post
+title: Strona Główna - Restrukturyzacje Karolina Kamińska
 layout: "base.njk"
+favIcon: "./dist/images/favIcon.png"
+description: "Profesjonalna restrukturyzacja firm – pomagamy firmom w trudnej sytuacji finansowej, oferując kompleksowe rozwiązania naprawcze, redukcję kosztów i optymalizację działań. Skuteczne wsparcie w odzyskaniu płynności finansowej."
 ---
 <article class="mainArticle">
   <!-- header -->
@@ -68,7 +70,7 @@ layout: "base.njk"
           <a href="#aktualnosci" class="nav__link">Aktualności</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Komunikaty</a>
+          <a href="./komunikaty/index.html" class="nav__link">Komunikaty</a>
         </li>
         <li class="nav__item">
           <a href="#kontakt" class="nav__link-contact">Kontakt</a>
@@ -352,98 +354,27 @@ layout: "base.njk"
     >
   </div>
   <div class="articles wrapper">
-    <div class="article">
-      <a href="./publikacje/wpis/tytul--wpisu--sth/index.html" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">
-        Dlaczego warto rozważyć restrukturyzację firmy?
-      </h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Restrukturyzacja firmy to proces, który może przynieść liczne korzyści,
-        zarówno w sytuacji...
-      </p>
-    </div>
-    <div class="article">
-      <a href="#" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">Lorem, ipsum dolor.</h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        modi, ea perferendis impedit tempora repellendus...
-      </p>
-    </div>
-    <div class="article">
-      <a href="#" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">Lorem, ipsum dolor.</h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        modi, ea perferendis impedit tempora repellendus...
-      </p>
-    </div>
-    <div class="article">
-      <a href="#" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">Lorem, ipsum dolor.</h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        modi, ea perferendis impedit tempora repellendus...
-      </p>
-    </div>
-    <div class="article">
-      <a href="#" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">Lorem, ipsum dolor.</h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        modi, ea perferendis impedit tempora repellendus...
-      </p>
-    </div>
-    <div class="article">
-      <a href="#" class="article__link">
-        <img
-          src="https://picsum.photos/500/250"
-          alt=""
-          class="article__link-img"
-        />
-      </a>
-      <h5 class="article__title">Lorem, ipsum dolor.</h5>
-      <p class="article__date">27.08.2024</p>
-      <p class="article__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        modi, ea perferendis impedit tempora repellendus...
-      </p>
-    </div>
+
+  {%- set maxPosts = 6 -%}
+  {%- set postCount = 0 -%}
+  {%- for post in collections.post | reverse -%}
+    {%- if postCount < maxPosts -%}
+      <div class="article">
+        <a href="{{ post.url }}" class="article__link">
+          <img
+            src="{{ post.data.image }}"
+            alt="{{ post.data.imageAlt }}"
+            class="article__link-img"
+          />
+        </a>
+        <h5 class="article__title">{{ post.data.title }}</h5>
+        <p class="article__date">{{ post.data.date | postDate }}</p>
+        <p class="article__description">{{ post.data.description }}..</p>
+      </div>
+      {%- set postCount = postCount + 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
   </div>
 </section>
 

@@ -1,8 +1,8 @@
 ---
-title: Aktualności - Restrukturyzacje Karolina Kamińska
+title: Komunikaty - Restrukturyzacje Karolina Kamińska
 layout: "base.njk"
 cssPath: "../../dist/css/"
-cssFile: "aktualnosci.min.css"
+cssFile: "komunikaty.min.css"
 description: "Aktualności i artykuły na temat restrukturyzacji firm, upadłości konsumenckiej oraz gospodarczej. Zobacz porady ekspertów z Restrukturyzacje Karolina Kamińska i dowiedz się, jak poprawić sytuację finansową swojej firmy."
 favIcon: "../../dist/images/favIcon.png"
 ---
@@ -104,45 +104,24 @@ favIcon: "../../dist/images/favIcon.png"
 
   <main class="main">
     <div class="container wrapper">
-      <h1 class="container-title">Aktualności</h1>
+      <h1 class="container-title">Komunikaty</h1>
     </div>
-    <div class="articles wrapper">
 
-      {%- for post in collections.post | reverse -%}
-      <a href="{{post.url}}" class="article">
-        <div class="article__link">
-          <img
-            src="{{post.data.image}}"
-            alt="{{post.data.imageAlt}}"
-            class="article__link-img"
-          />
+    <div class="artciles wrapper">
+      {%- for sell in collections.sell | reverse -%}
+        <div class="article">
+          <a class="imageContainer" href="{{sell.url}}">
+              <img class="imageContainer-item" src="{{sell.data.image}}" alt="{{post.data.imageAlt}}">
+          </a>
+          <div class="information">
+              <h2 class="information-title">{{ sell.data.title }}</h2>
+              <p class="information-description">{{ sell.data.description }}</p>
+              <a class="information-button" href="{{sell.url}}">Więcej informacji</a>
+          </div>
         </div>
-        <h2 class="article__title">{{ post.data.title }}</h2>
-        <p class="article__date">{{ post.data.date | postDate }}</p>
-        <p class="article__description">
-          {{post.data.description}}..
-        </p>
-        <div href="" class="article__readMore">
-          Czytaj dalej
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-arrow-right"
-          >
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
-      </a>
       {%- endfor -%}
     </div>
+
   </main>
 </article>
 <script src="../dist/js/script.min.js"></script>

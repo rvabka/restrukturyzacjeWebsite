@@ -1,8 +1,10 @@
 ---
-title: Restrukturyzacje Karolina Kamińska >> Restrukturyzacje firm
+title: "{{ collections.post | reverse | first.data.title }} - Restrukturyzacje Karolina Kamińska"
 layout: "base.njk"
 cssPath: "../../../dist/css/"
 cssFile: "wpis.min.css"
+description: "{{ collections.post | reverse | first.data.description | safe }}"
+favIcon: "../../../dist/images/favIcon/"
 ---
     <div class="mainArticle">
       <header class="wrapper">
