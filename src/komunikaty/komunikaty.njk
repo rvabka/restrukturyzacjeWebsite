@@ -108,15 +108,19 @@ favIcon: "../../dist/images/favIcon.png"
     </div>
 
     <div class="artciles wrapper">
-      {%- for sell in collections.sell | reverse -%}
+      {%- for sale in collections.sale | reverse -%}
         <div class="article">
-          <a class="imageContainer" href="{{sell.url}}">
-              <img class="imageContainer-item" src="{{sell.data.image}}" alt="{{post.data.imageAlt}}">
+          <a class="imageContainer" href="{{sale.url}}">
+              <img class="imageContainer-item" src="{{sale.data.mainImage}}" alt="{{post.data.mainImageAlt}}">
           </a>
           <div class="information">
-              <h2 class="information-title">{{ sell.data.title }}</h2>
-              <p class="information-description">{{ sell.data.description }}</p>
-              <a class="information-button" href="{{sell.url}}">Więcej informacji</a>
+              <h2 class="information-title">{{ sale.data.title }}</h2>
+              <p class="information-date">{{sale.data.date | postDate }}
+                 <svg xmlns="http://www.w3.org/2000/svg" class="information-date-item" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </p>
+              <p class="information-description">{{ sale.data.description }}</p>
+              <a class="information-button" href="{{sale.url}}">Więcej informacji</a>
           </div>
         </div>
       {%- endfor -%}

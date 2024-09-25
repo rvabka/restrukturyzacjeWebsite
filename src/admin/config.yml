@@ -20,7 +20,6 @@ collections:
       - { label: "Zdjęcie", name: "image", widget: "image" }
       - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
   - name: "ogloszenia-sprzedazy"
     label: "Ogłoszenia Sprzedaży"
     folder: "src/komunikaty/ogloszenia"
@@ -31,7 +30,12 @@ collections:
       - { label: "Cena", name: "price", widget: "string" }
       - { label: "Opis", name: "description", widget: "text" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Tagi", name: "tags", widget: "list", default: ["ogloszenie"] }
-      - { label: "Zdjęcie", name: "image", widget: "image" }
-      - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
+      - { label: "Tagi", name: "tags", widget: "list", default: ["sale"] }
+      - { label: "Główne zdjęcie", name: "mainImage", widget: "image" }
+      - { label: "Opis głównego zdjęcia", name: "mainImageAlt", widget: "string" }
+      - { label: "Dodatkowe zdjęcia", name: "images", widget: "list",
+          fields:
+            - { label: "Zdjęcie", name: "image", widget: "image" }
+            - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
+        }
       - { label: "Body", name: "body", widget: "markdown" }

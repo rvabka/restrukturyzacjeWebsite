@@ -1,11 +1,12 @@
 ---
-title: "{{ collections.post | reverse | first.data.title }} - Restrukturyzacje Karolina Kamińska"
+title: "{{ collections.sell | reverse | first.data.title }} - Restrukturyzacje Karolina Kamińska"
 layout: "base.njk"
 cssPath: "../../../dist/css/"
-cssFile: "wpis.min.css"
-description: "{{ collections.post | reverse | first.data.description | safe }}"
+cssFile: "sale.min.css"
+description: "{{ collections.sell | reverse | first.data.description | safe }}"
 favIcon: "../../../dist/images/favIcon.png"
 ---
+
     <div class="mainArticle">
       <header class="wrapper">
         <nav class="nav wrapper">
@@ -114,34 +115,7 @@ favIcon: "../../../dist/images/favIcon.png"
           </h1>
         </section>
         <section class="article wrapper">
-          <article class="left">
-            <img class="left-img" src="{{ image }}" alt="{{ imageAlt }}" />
-            <h2 class="left-title">
-              {{ subtitle }}
-            </h2>
-            <p class="left-heading">
-              {{ description }}
-            </p>
-            <p class="left-text">
-              {{ content | safe }}
-            </p>
-          </article>
-          <div class="right">
-            <p class="right-title">Zobacz inne wpisy:</p>
-            <ul class="right__list">
-              {%- set postCount = 0 -%}
-              {%- for post in collections.posts -%}
-                {%- if post.url != page.url and postCount < 5 -%}
-                  <li class="right__list-item">
-                    <a class="right__list-link" href="{{ post.url }}">
-                      {{ post.data.title }}
-                    </a>
-                  </li>
-                  {%- set postCount = postCount + 1 -%}
-                {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          </div>
+          
         </section>
       </main>
     </div>

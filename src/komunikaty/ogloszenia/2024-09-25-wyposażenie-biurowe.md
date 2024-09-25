@@ -2,9 +2,8 @@
 title: "Sprzedaż wyposażenia biurowego po restrukturyzacji"
 price: "5000 PLN"
 date: 2024-09-25
-tags: ["sell"]
-image: "https://picsum.photos/500/250"
-imageAlt: "Zdjęcie nowoczesnego wyposażenia biurowego na sprzedaż"
+mainImage: "https://picsum.photos/500/250"
+mainImageAlt: "Zdjęcie nowoczesnego wyposażenia biurowego na sprzedaż"
 description: "Oferujemy na sprzedaż kompletne wyposażenie biurowe po restrukturyzacji firmy. Meble, sprzęt elektroniczny i artykuły biurowe w bardzo dobrym stanie."
 ---
 

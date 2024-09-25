@@ -118,7 +118,10 @@ favIcon: "../../dist/images/favIcon.png"
           />
         </div>
         <h2 class="article__title">{{ post.data.title }}</h2>
-        <p class="article__date">{{ post.data.date | postDate }}</p>
+        <p class="article__date">{{ post.data.date | postDate }}
+        <svg xmlns="http://www.w3.org/2000/svg" class="article__date-item" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        </p>
         <p class="article__description">
           {{post.data.description}}..
         </p>
