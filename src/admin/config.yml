@@ -34,3 +34,4 @@ collections:
       - { label: "Tagi", name: "tags", widget: "list", default: ["ogloszenie"] }
       - { label: "Zdjęcie", name: "image", widget: "image" }
       - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
