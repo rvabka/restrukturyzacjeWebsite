@@ -44,4 +44,3 @@ collections:
           - { label: "Zdjęcie", name: "image", widget: "image" }
           - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Body", name: "body", widget: "markdown" }
