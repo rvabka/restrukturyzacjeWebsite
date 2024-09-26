@@ -47,10 +47,111 @@ body {
     }
   }
 
+  h2 {
+    font-size: clamp(1.6rem, 2rem, 2.1rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: clamp(1.6rem, 2rem, 2.1rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: clamp(1.5rem, 1.7rem, 2rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    margin-bottom: 0.7em;
+  }
+
+  strong {
+    font-size: clamp(1.5rem, 1.7rem, 2rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: circle;
+    margin-left: 1.2rem;
+  }
+  li {
+    font-size: clamp(1.5rem, 1.7rem, 2rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+
+    &:last-child {
+      margin-bottom: 0.7rem;
+    }
+
+    strong {
+      font-size: clamp(1.5rem, 1.7rem, 2rem);
+      font-family: "Cormorant Garamond", serif;
+      font-weight: bold;
+    }
+  }
+
   .article {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 1rem;
     width: 100%;
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      border: 1px solid $goldColor;
+      border-radius: 10px;
+      padding: 2rem;
+
+      &-image {
+        margin-right: 1.3rem;
+        border-radius: 8px;
+        box-shadow: 6px 6px 10px 3px #dddddd;
+      }
+
+      &__right {
+        position: relative;
+        height: 250px;
+
+        &-description {
+          font-size: clamp(1.6rem, 2rem, 2.1rem);
+          font-family: "Cormorant Garamond", serif;
+          font-weight: bold;
+        }
+
+        &-date {
+          position: absolute;
+          bottom: -15px;
+          right: 0px;
+          border: 1px solid $darkColor;
+          text-align: center;
+          padding: 0.3rem 0.5rem;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      width: 100%;
+      border-radius: 10px;
+      padding: 1rem;
+
+      &-item {
+        background-color: #222;
+        height: 100%;
+        box-shadow: 6px 6px 10px 3px #dddddd;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   }
 }

@@ -25,6 +25,4 @@ Wszystkie oferowane przedmioty są w bardzo dobrym stanie, użytkowane były prz
 
 Cena za cały komplet wynosi **5000 PLN**. Możliwość negocjacji ceny przy szybkiej transakcji. Sprzęt można obejrzeć na miejscu w Warszawie po wcześniejszym umówieniu się.
 
----
-
 **Kontakt**: W celu uzyskania dodatkowych informacji prosimy o kontakt pod numerem telefonu: 123-456-789 lub mailowo na adres: kontakt@firma.pl.

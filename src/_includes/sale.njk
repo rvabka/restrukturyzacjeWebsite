@@ -78,7 +78,7 @@ favIcon: "../../../dist/images/favIcon.png"
               >
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Komunikaty</a>
+              <a href="../../index.html" class="nav__link">Komunikaty</a>
             </li>
             <li class="nav__item">
               <a href="../../../index.html#kontakt" class="nav__link-contact"
@@ -113,9 +113,25 @@ favIcon: "../../../dist/images/favIcon.png"
           <h1 class="container-title">
               {{ title }}
           </h1>
-        </section>
-        <section class="article wrapper">
-          
+          <section class="article wrapper">
+            <div class="top">
+              <img class="top-image" src="{{ mainImage }}" alt="{{ mainImageAlt }}">
+              <div class="top__right">
+                <h2 class="top__right-description">{{ description }}</h2>
+                <p class="top__right-date">{{date | postDate}}</p>
+              </div>
+            </div>
+            <p>{{ content | safe }}</p>
+            <div class="gallery">
+            {% for sale in collections.sale %}
+                {% for imageItem in sale.data.images %}
+                  <div class="gallery-item">
+                    <img src="{{ imageItem.image }}" alt="{{ imageItem.imageAlt }}" class="gallery-image" />
+                  </div>
+                {% endfor %}
+            {% endfor %}
+            </div>
+          </section>
         </section>
       </main>
     </div>
