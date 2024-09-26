@@ -664,34 +664,3 @@
     }
   }
 }
-
-// scroll button
-.scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px;
-  background-color: $goldColor;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: none;
-  z-index: 2000;
-
-  &:hover {
-    transform: scale(1.05);
-    -webkit-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
-    -moz-box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
-    box-shadow: 8px 8px 28px -16px rgba(252, 163, 17, 1);
-
-    svg {
-      transform: rotate(360deg);
-    }
-  }
-
-  & svg {
-    transition: all 0.4s ease;
-  }
-}

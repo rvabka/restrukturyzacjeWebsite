@@ -112,13 +112,13 @@ favIcon: "../../../dist/images/favIcon.png"
         <section class="container wrapper">
           <h1 class="container-title">
               {{ title }}
+              <p class="top__right-date">{{date | postDate}}</p>
           </h1>
-          <section class="article wrapper">
+          <section class="article">
             <div class="top">
               <img class="top-image" src="{{ mainImage }}" alt="{{ mainImageAlt }}">
               <div class="top__right">
                 <h2 class="top__right-description">{{ description }}</h2>
-                <p class="top__right-date">{{date | postDate}}</p>
               </div>
             </div>
             <div class="article-content">
@@ -137,6 +137,22 @@ favIcon: "../../../dist/images/favIcon.png"
         </section>
       </main>
     </div>
-
+    <button class="scrollToTopBtn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="35"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-up"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
   <script src="../../../dist/js/script.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
