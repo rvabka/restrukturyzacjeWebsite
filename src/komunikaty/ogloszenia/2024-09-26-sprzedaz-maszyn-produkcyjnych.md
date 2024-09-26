@@ -3,13 +3,15 @@ title: "Sprzedaż maszyn produkcyjnych po restrukturyzacji"
 price: "150 000 PLN"
 description: "Oferujemy na sprzedaż maszyny produkcyjne z likwidowanej linii produkcyjnej. Maszyny są w pełni sprawne, gotowe do użytku. W skład zestawu wchodzi m.in. maszyna do cięcia, pakowania oraz transportu materiałów."
 date: 2024-09-26
-mainImage: "https://picsum.photos/500/250"
+mainImage: "https://picsum.photos/550/250"
 mainImageAlt: "Główna maszyna produkcyjna na sprzedaż"
 images:
   - image: "https://picsum.photos/500/250"
     imageAlt: "Maszyna do cięcia materiałów"
   - image: "https://picsum.photos/500/250"
     imageAlt: "Maszyna pakująca z automatycznym systemem"
+  - image: "https://picsum.photos/500/250"
+    imageAlt: "Transporter taśmowy do materiałów"
   - image: "https://picsum.photos/500/250"
     imageAlt: "Transporter taśmowy do materiałów"
 ---

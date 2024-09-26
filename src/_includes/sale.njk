@@ -114,9 +114,11 @@ favIcon: "../../../dist/images/favIcon.png"
               {{ title }}
               <p class="top__right-date">{{date | postDate}}</p>
           </h1>
-          <section class="article">
+          <section class="article wrapper">
             <div class="top">
-              <img class="top-image" src="{{ mainImage }}" alt="{{ mainImageAlt }}">
+              <div class="top__left">
+                <img class="top__left-image" src="{{ mainImage }}" alt="{{ mainImageAlt }}">
+              </div>
               <div class="top__right">
                 <h2 class="top__right-description">{{ description }}</h2>
               </div>

@@ -130,19 +130,23 @@ body {
       border-radius: 10px;
       padding: 1.5rem;
 
-      &-image {
-        max-width: 80%;
-        height: auto;
+      &__left {
         margin: 0 auto;
-        object-fit: cover;
-        object-position: center;
         margin-bottom: 1rem;
         border-radius: 8px;
         box-shadow: 6px 6px 10px 3px #dddddd;
+        max-width: 600px;
+        max-height: 350px;
+
+        &-image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+        }
       }
 
       &__right {
-
         &-description {
           font-size: clamp(1.6rem, 2rem, 2.1rem);
           font-family: "Cormorant Garamond", serif;
@@ -172,27 +176,26 @@ body {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      width: 100%;
+      gap: 1rem;
       height: 100%;
       border-radius: 10px;
       padding: 1rem;
       margin-bottom: 1.6rem;
 
       &-item {
-        background-color: #222;
-        box-shadow: 6px 6px 10px 3px #dddddd;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      &-image {
-        max-width: 100%;
-        object-fit: cover;
-        object-position: center;
         margin: 0 auto;
         margin-bottom: 1rem;
         border-radius: 8px;
+        box-shadow: 6px 6px 10px 3px #dddddd;
+        max-width: 600px;
+        max-height: 350px;
+      }
+
+      &-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
       }
     }
   }
