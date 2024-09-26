@@ -1,6 +1,9 @@
 # Włącz moduł rewritingu
 RewriteEngine On
 
+AddType text/css .css
+
+
 # Ustawienie kodowania
 AddDefaultCharset UTF-8
 

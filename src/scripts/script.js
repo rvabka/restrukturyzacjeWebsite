@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  AOS.init();
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector(".nav");
   const servicesLink = document.getElementById("services");
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownLink = document.querySelectorAll(".nav__dropdown-link");
   const arrow = document.querySelector(".nav__link-arrow");
   const navItems = document.querySelectorAll(".nav__link");
-
 
   if (window.innerWidth > 850) {
     window.addEventListener("scroll", function () {

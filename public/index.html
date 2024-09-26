@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="../dist/css/style.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="shortcut icon" href="./dist/images/favIcon.png" type="image/x-icon">
-    <meta name="description" content="Profesjonalna restrukturyzacja firm – pomagamy firmom w trudnej sytuacji finansowej, oferując kompleksowe rozwiązania naprawcze, redukcję kosztów i optymalizację działań. Skuteczne wsparcie w odzyskaniu płynności finansowej.">
+    <meta name="description" content="Profesjonalna restrukturyzacja firm – pomagam firmom w trudnej sytuacji finansowej, oferując kompleksowe rozwiązania naprawcze, redukcję kosztów i optymalizację działań. Skuteczne wsparcie w odzyskaniu płynności finansowej.">
     <title>Strona Główna - Restrukturyzacje Karolina Kamińska</title>
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -187,7 +186,7 @@
   <div class="services__container">
     <div class="services__container-flex">
       <a
-        href="./uslugi/restrukturyzacje-firm.html"
+        href="./uslugi/restrukturyzacje-firm/index.html"
         class="services__container-item"
       >
         <svg
@@ -205,7 +204,7 @@
         </svg>
         <h3 class="services__container-item--title">Restrukturyzacja firm</h3>
       </a>
-      <a href="/uslugi/obsluga-firm.html" class="services__container-item">
+      <a href="./uslugi/obsluga-firm/index.html" class="services__container-item">
         <svg
           class="services__container-item--image"
           xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +228,7 @@
         </svg>
         <h3 class="services__container-item--title">Obsługa firm</h3>
       </a>
-      <a href="/uslugi/mediacje.html" class="services__container-item">
+      <a href="./uslugi/mediacje/index.html" class="services__container-item">
         <svg
           class="services__container-item--image"
           xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +250,7 @@
     </div>
     <div class="services__container-flex">
       <a
-        href="/uslugi/upadlosc-konsumencka.html"
+        href="./uslugi/upadlosc-konsumencka/index.html"
         class="services__container-item"
       >
         <svg
@@ -271,7 +270,7 @@
         <h3 class="services__container-item--title">Upadłość konsumencka</h3>
       </a>
       <a
-        href="/uslugi/upadlosc-gospodarcza.html"
+        href="./uslugi/upadlosc-gospodarcza/index.html"
         class="services__container-item"
       >
         <svg
@@ -430,25 +429,9 @@
   ></iframe>
 </section>
 
-<button class="scrollToTopBtn">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="35"
-    height="30"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-arrow-up"
-  >
-    <line x1="12" y1="19" x2="12" y2="5"></line>
-    <polyline points="5 12 12 5 19 12"></polyline>
-  </svg>
-</button>
 <script src="../dist/js/script.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init()</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <footer class="footer" id="kontakt">
   <p class="footer__logo">
@@ -555,6 +538,24 @@
   </a>
 </footer>
 
+     <button class="scrollToTopBtn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="35"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-up"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+
     <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
@@ -566,5 +567,6 @@
       });
     }
     </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
