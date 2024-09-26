@@ -99,23 +99,34 @@ body {
     margin-top: 1rem;
     width: 100%;
 
+    &-content {
+      border: 1px solid $goldColor;
+      box-shadow: 6px 6px 10px 3px #dddddd;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
     .top {
+      position: relative;
       display: flex;
       align-items: flex-start;
       width: 100%;
+      min-height: 250px;
       border: 1px solid $goldColor;
+      box-shadow: 6px 6px 10px 3px #dddddd;
       border-radius: 10px;
       padding: 2rem;
 
       &-image {
+        margin: auto;
         margin-right: 1.3rem;
         border-radius: 8px;
         box-shadow: 6px 6px 10px 3px #dddddd;
       }
 
       &__right {
-        position: relative;
-        height: 250px;
+        min-height: 100%;
 
         &-description {
           font-size: clamp(1.6rem, 2rem, 2.1rem);
@@ -125,8 +136,8 @@ body {
 
         &-date {
           position: absolute;
-          bottom: -15px;
-          right: 0px;
+          bottom: 10px;
+          right: 20px;
           border: 1px solid $darkColor;
           text-align: center;
           padding: 0.3rem 0.5rem;

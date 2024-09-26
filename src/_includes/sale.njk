@@ -121,7 +121,9 @@ favIcon: "../../../dist/images/favIcon.png"
                 <p class="top__right-date">{{date | postDate}}</p>
               </div>
             </div>
-            <p>{{ content | safe }}</p>
+            <div class="article-content">
+              {{ content | safe }}
+            </div>
             <div class="gallery">
             {% for sale in collections.sale %}
                 {% for imageItem in sale.data.images %}
