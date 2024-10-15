@@ -16,7 +16,6 @@ collections:
       - { label: "Autor", name: "author", widget: "string" }
       - { label: "Opis", name: "description", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Tagi", name: "tags", widget: "list", default: ["post"] }
       - { label: "Zdjęcie", name: "image", widget: "image" }
       - { label: "Opis zdjęcia", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -30,7 +29,6 @@ collections:
       - { label: "Cena", name: "price", widget: "string" }
       - { label: "Opis", name: "description", widget: "text" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Tagi", name: "tags", widget: "list", default: ["sale"] }
       - { label: "Główne zdjęcie", name: "mainImage", widget: "image" }
       - {
           label: "Opis głównego zdjęcia",

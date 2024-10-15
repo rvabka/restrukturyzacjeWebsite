@@ -196,7 +196,7 @@ body {
       text-align: center;
       flex-direction: column;
       width: 100%;
-      margin-top: -15rem;
+      margin-top: -7rem;
     }
 
     &__link {
@@ -216,6 +216,28 @@ body {
 
       &:last-child {
         border-bottom: 0px;
+      }
+    }
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 850px) {
+    &__logo {
+      display: none;
+    }
+
+    &__item {
+      font-size: 0.8rem;
+    }
+
+    &__list {
+      margin-top: 0rem;
+    }
+
+    &__dropdown {
+      top: 90%;
+
+      &-link {
+        font-size: 0.9rem;
       }
     }
   }
